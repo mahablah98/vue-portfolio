@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar" :class="{ 'dark-mode': isDarkMode }">
     <div class="navbar-container">
       <router-link to="/" @click="scrollTop" class="navbar-brand">Home</router-link>
       <ul class="navbar-menu">
@@ -9,6 +9,9 @@
       </ul>
       <div class="navbar-icons">
         <NavBarIcons v-for="icon in icons" :key="icon" :selectedIcon="icon" />
+        <button @click="toggleDarkMode" class="dark-mode-toggle">
+          {{ isDarkMode ? '☀️' : '🌙' }}
+        </button>
       </div>
     </div>
   </nav>
@@ -19,20 +22,29 @@ import NavBarIcons from '../components/NavBarIcons';
 
 export default {
   components: { NavBarIcons },
-  setup() {
-    const webRoutes = [
-      { title: 'Skills', route: '/skills' },
-      { title: 'Experience', route: '/experiences' },
-      { title: 'Contact', route: '/contact' }
-    ];
-    const icons = ['linkedIn', 'gitSource', 'twitter', 'stackOverflow'];
-    const scrollTop = () => {
+  props: ['isDarkMode'],
+  emits: ['toggle-dark-mode'],
+  data() {
+    return {
+      webRoutes: [
+        { title: 'Skills', route: '/skills' },
+        { title: 'Experience', route: '/experiences' },
+        { title: 'Contact', route: '/contact' }
+      ],
+      icons: ['linkedIn', 'gitSource', 'twitter', 'stackOverflow']
+    }
+  },
+  methods: {
+    scrollTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    return { webRoutes, icons, scrollTop };
+    },
+    toggleDarkMode() {
+      this.$emit('toggle-dark-mode');
+    }
   }
 };
 </script>
+
 
 <style scoped>
 .navbar {
@@ -94,5 +106,32 @@ export default {
     margin-left: 0;
     margin-right: 1rem;
   }
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dark-mode .navbar {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .navbar-brand,
+.dark-mode .navbar-link {
+  color: #fff;
+}
+.dark-mode .navbar-link:hover {
+  color: #ddd;
 }
 </style>

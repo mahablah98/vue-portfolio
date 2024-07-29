@@ -1,7 +1,9 @@
 <template>
-  <NavBar />
-  <div class="main-container">
-    <router-view />
+  <div id="app" :class="{ 'dark-mode': isDarkMode }">
+    <NavBar @toggle-dark-mode="toggleDarkMode" :isDarkMode="isDarkMode" />
+    <div class="main-container">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -10,8 +12,17 @@ import NavBar from './views/NavBar.vue'
 
 export default {
   name: 'App',
-  components: {
-    NavBar,
+  components: {NavBar},
+  data() {
+    return {
+      isDarkMode: false
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode;
+      document.body.classList.toggle('dark-mode', this.isDarkMode);
+    }
   }
 }
 </script>
@@ -23,6 +34,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .main-container {
@@ -34,5 +46,15 @@ export default {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#app.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+#app.dark-mode .main-container {
+  background-color: #2c2c2c;
 }
 </style>

@@ -9,8 +9,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <p class="timeline-date">{{ event.Timeframe }}</p>
-          <p class="timeline-title">{{ event.Title }} at {{ event.Company }}</p> <!-- Concatenate Title and Company -->
-          <TagComponent class="timeline-tags" :tagSettings="event.Tags"/>
+          <p class="timeline-title">{{ event.Title }} at {{ event.Company }}</p>
+          <ul class="timeline-description" v-if="event.Description">
+            <li v-for="(item, i) in event.Description" :key="i">{{ item }}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -18,21 +20,56 @@
 </template>
 
 <script>
-import TagComponent from './Tags.vue';
 import EventData from './TimelineEvents.json';
 
 export default {
   name: 'TimelineEvents',
-  components: { TagComponent },
   data() {
     return {
-      eventdata: EventData,
+      eventdata: EventData.map(event => ({
+        ...event,
+        Description: this.getDescription(event.Title)
+      })),
     };
   },
+  methods: {
+    getDescription(title) {
+      const descriptions = {
+        "Senior (M365) Consultant": [
+          "Collaborated with several customers (Hensoldt AG, scanplus, GARDENA, Daimler etc.)",
+          "Project management & development (SPFx, JS, Vue.js, KendoUI)",
+          "SharePoint Online Consulting",
+          "PowerPlatform (Power Automate, Power Apps, PowerBI, Azure Logic Apps)",
+          "Jira/Confluence/Bitbucket Administration and migration for Union Tank Eckstein GmbH",
+        ],
+        "Junior (M365) Consultant": [
+          "SharePoint Consulting (SP On-Prem 2013/2016/2019)",
+          "SharePoint migration (On-Prem -> Cloud)",
+          "HCL Notes Support for Husqvarna using ServiceNow and HCL Domino Notes/Designer/Admin",
+        ],
+        "Working Student Sales Reporting Tool": [
+          "Person in charge of a major sales reporting tool (with approx. 500 users) at Hensoldt",
+          "Independent maintenance of sales reporting tool with admin functionality (user support, technical documentation, bug fixing and change requests)",
+          "Project management"
+        ]
+      };
+      return descriptions[title] || [];
+    }
+  }
 };
 </script>
 
 <style scoped>
+
+.timeline-description {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.timeline-description li {
+  margin-bottom: 5px;
+}
+
 .timeline-container {
   position: relative;
   padding: 20px 0;
@@ -86,10 +123,6 @@ export default {
   margin: 5px 0;
   font-size: 1.2rem;
   color: #007bff;
-}
-
-.timeline-tags {
-  margin-top: 10px;
 }
 
 @media (max-width: 768px) {

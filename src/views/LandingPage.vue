@@ -32,12 +32,9 @@
       <section class="abilities-section">
         <h2>Tools/Skills</h2>
         <div class="abilities-container">
-          <span class="ability">Problem-Solving</span>
-          <span class="ability">Project Management</span>
-          <span class="ability">Effectice Communication</span>
-          <span class="ability">Adaptability</span>
-          <span class="ability">Persistence</span>
-          <span class="ability">Teamwork</span>
+          <span v-for="(tag, index) in uniqueTags" :key="index" class="ability">
+            {{ tag }}
+          </span>
         </div>
       </section>
     </main>
@@ -47,14 +44,28 @@
 <script>
 import TimelineEvents from '../components/TimelineEvents.vue';
 import EducationTimeline from '../components/EducationTimeline.vue';
+import EventData from '../components/TimelineEvents.json';
 
 export default {
   name: 'LandingPage',
-  components: { TimelineEvents, EducationTimeline }
+  components: { TimelineEvents, EducationTimeline },
+  computed: {
+    uniqueTags() {
+      const allTags = this.timelineEvents.flatMap(event => event.Tags);
+      return [...new Set(allTags)].sort();
+    }
+  },
+  data() {
+    return {
+      timelineEvents: EventData
+    }
+  }
 }
 </script>
 
+
 <style scoped>
+
 .landing-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -132,5 +143,40 @@ export default {
 .ability:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.abilities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.ability {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ability:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .abilities-container {
+    justify-content: center;
+  }
+
+  .ability {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
 </style>
