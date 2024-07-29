@@ -1,7 +1,7 @@
 <template>
-  <NavBar/>
-  <div class="mt-10 xl:px-[20rem] lg:px-[14rem] md:px-[10rem] sm:px-[7rem] px-[4rem]">
-    <router-view></router-view>
+  <NavBar />
+  <div class="main-container">
+    <router-view />
   </div>
 </template>
 
@@ -18,12 +18,21 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
-  background-color: darkgray;
-  /* margin-top: 60px; */
+  background-color: #f5f5f5;
+}
+
+.main-container {
+  margin-top: 10px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 </style>

@@ -3,14 +3,15 @@
     <div class="timeline">
       <div
           class="timeline-event"
-          v-for="(event, index) in eventdata"
+          v-for="(event, index) in educationData"
           :key="index"
       >
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <p class="timeline-date">{{ event.Timeframe }}</p>
-          <p class="timeline-title">{{ event.Title }} at {{ event.Company }}</p> <!-- Concatenate Title and Company -->
-          <TagComponent class="timeline-tags" :tagSettings="event.Tags"/>
+          <p class="timeline-title">{{ event.Degree }}</p>
+          <p class="timeline-institution">{{ event.Institution }}</p>
+          <p class="timeline-description">{{ event.Description }}</p>
         </div>
       </div>
     </div>
@@ -18,15 +19,13 @@
 </template>
 
 <script>
-import TagComponent from './Tags.vue';
-import EventData from './TimelineEvents.json';
+import EducationData from './EducationTimeline.json';
 
 export default {
-  name: 'TimelineEvents',
-  components: { TagComponent },
+  name: 'EducationTimeline',
   data() {
     return {
-      eventdata: EventData,
+      educationData: EducationData,
     };
   },
 };
@@ -88,8 +87,16 @@ export default {
   color: #007bff;
 }
 
-.timeline-tags {
-  margin-top: 10px;
+.timeline-institution {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline-description {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #777;
 }
 
 @media (max-width: 768px) {
@@ -115,6 +122,14 @@ export default {
 
   .timeline-title {
     font-size: 1.1rem;
+  }
+
+  .timeline-institution {
+    font-size: 1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
   }
 }
 </style>

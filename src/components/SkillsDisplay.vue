@@ -56,13 +56,13 @@ export default {
 		currentSelectedTechnology(index) {
 			switch (index) {
                 case 0:
-                    this.selectedSkill = 'Frontend';
+                    this.selectedSkill = 'General';
                     break;
                 case 1:
-                    this.selectedSkill = 'Backend';
+                    this.selectedSkill = 'Frontend';
                     break;
                 case 2:
-                    this.selectedSkill = 'Infrastructure';
+                    this.selectedSkill = 'Backend';
                     break;
 			}
 		}

@@ -3,13 +3,11 @@
             <h2 class="lg:text-2xl text-lg font-bold underline underline-offset-8">Overview</h2>
             <br/>
             <p class="xl:text-lg text-base lg:indent-8 md:indent-4 sm:indent-0">
-                Xavier is a full stack engineer focused on Python, VueJS, SQL and AWS. He possesses soft 
-                skills that bring value to his personal, academic and career journeys. No stranger to startup culture 
-                (pre and post acquisition), Xavier thrives in different paced environments by maintaining 
-                cross functional communication, understanding business context behind developement,
-                owning project deadlines and effectively taking constructive criticism. Always striving to be 
-                the best version of himself has brought Xavier many opportunities to discover new and hone 
-                existing skills.
+                As a consultant, I have worked with several costumers by now, including Husqvarna, Daimler, Hensoldt AG,
+                Schwenk, Union Tank Eckstein GmbH etc. My work covered several areas: I started with administration and
+                basic 1st Level Support. Then, it continue to evolve into development, 2nd/3rd Level Support,
+                automating processes using Power Automate, and  now I focus on project management in M365.
+                However, I do love coding and I will build some neat applications soon.
             </p>
     </section> 
     <section>
@@ -26,7 +24,7 @@ export default {
     components: {SkillsDisplay},
     data() {
         return {
-            types: ['Frontend', 'Backend', 'Infrastructure']
+            types: ['General','Frontend', 'Backend']
         }
     }    
 }

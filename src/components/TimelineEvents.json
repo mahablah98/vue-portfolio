@@ -1,42 +1,38 @@
 [
     {
-        "Title": "Invited to Google CSSI at UT Dallas and deployed first application",
-        "Timeframe": "2018",
-        "Tags": ["Python", "Javascript", "HTML", "CSS", "Google App Engine"]
+        "Title": "Senior (M365) Consultant",
+        "Timeframe": "10/2023 - Today",
+        "Company": "Camdere Consulting GmbH",
+        "Tags": ["M365", "SharePoint", "Project Management", "HCL Notes", "Atlassian Administration", "Migration On-Prem -> Cloud", "SPFx", "Vue.js", "JavaScript", "CSS", "Frontend-Development", "SQL", "Databases", "Active Directory", "Exchange", "PowerShell", "Power Automate", "Power Apps"]
     },
     {
-        "Title": "Enrolled in Computer Science Degree at UT Dallas",
-        "Timeframe": "2018",
-        "Tags": ["C++", "Java", "Data Structures", "Functional Programming"]
+        "Title": "Junior (M365) Consultant",
+        "Timeframe": "08/2019 - 10/2023",
+        "Company": "Camdere Consulting GmbH",
+        "Tags": ["SharePoint 2013", "Nintex Forms", "Nintex Workflow", "JavaScript", "jQuery", "ShareGate", "Azure DevOps", "ServiceNow", "Ajax", "REST", "Helpdesk"]
     },
     {
-        "Title": "Joined a Waste Management SaaS startup contributing to web dev. and online presence",
-        "Timeframe": "2018",
-        "Tags": ["HTML/CSS", "SEO", "Tech Support", "SaaS"]
+        "Title": "Working Student Sales Reporting Tool",
+        "Timeframe": "01/2019 - 08/2019",
+        "Company": "HENSOLDT AG",
+        "Tags": ["Project Management", "Administration", "SharePoint 2013", "Jira", "Confluence", "User Stories", "Bugs", "Excel", "PowerPoint", "Visio"]
     },
     {
-        "Title": "Presented ML app UTD's ACM Projects that leanred/recognized Alphanumericals from videos",
-        "Timeframe": "2019",
-        "Tags": ["Python", "Java", "MNIST", "TensorFlow"]
+        "Title": "Working Student Hardening Technology",
+        "Timeframe": "04/2018 - 08/2018",
+        "Company": "SHU",
+        "Tags": ["Machines", "Facilities", "Monitoring"]
     },
     {
-        "Title": "Began heavily contributing to a Home Services SaaS startup through company acquisition",
-        "Timeframe": "2020",
-        "Tags": ["Python", "SQL/NoSQL", "AWS", "Docker", "CI/CD", "DevOps"]
+        "Title": "Interviewer",
+        "Timeframe": "11/2015 - 11/2016",
+        "Company": "abs Wiblingen",
+        "Tags": ["Forms", "Surveys", "Communication skills"]
     },
     {
-        "Title": "Automated an internationally sold upsell product focused on employee retention",
-        "Timeframe": "2021",
-        "Tags": ["Python", "MySQL", "CRONs", "ElasticSearch", "REST"]
-    },
-    {
-        "Title": "Developed a social scrapper that was contracted by 2 companies to support their sales teams",
-        "Timeframe": "2022",
-        "Tags": ["Python", "REST", "Sales", "HunterIO"]
-    },
-    {
-        "Title": "Further explored a more entrepreneurial mindset...",
-        "Timeframe": "2023",
-        "Tags": ["Loading..."]
+        "Title": "Holiday work (Order picker)",
+        "Timeframe": "07/2016 - 10/2016",
+        "Company": "Logistik Ulm GmbH",
+        "Tags": ["Quality assessment", "Inventory", "Pallet truck", "Documentation"]
     }
 ]

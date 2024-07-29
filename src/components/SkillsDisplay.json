@@ -1,5 +1,29 @@
 [
     {
+        "type": "General",
+        "technologies": [
+            {
+                "title": "Docker",
+                "image": "devicon-docker-plain"
+            },
+            {
+                "title": "Redis",
+                "image": "devicon-redis-plain"
+            },
+            {
+                "title": "ElasticSearch",
+                "image": "devicon-elasticsearch-plain"
+            },
+            {
+                "title": "CircleCI",
+                "image": "devicon-circleci-plain"
+            },            {
+                "title": "Netlify",
+                "image": "devicon-netlify-plain"
+            }
+        ]
+    },
+    {
         "type": "Frontend",
         "technologies": [
             {
@@ -38,38 +62,6 @@
             {
                 "title": "Java",
                 "image": "devicon-java-plain"
-            },
-            {
-                "title": "C++",
-                "image": "devicon-cplusplus-plain"
-            }
-        ]
-    },
-    {
-        "type": "Infrastructure",
-        "technologies": [
-            {
-                "title": "AWS",
-                "image": "devicon-amazonwebservices-plain-wordmark"
-            },
-            {
-                "title": "Docker",
-                "image": "devicon-docker-plain"
-            },
-            {
-                "title": "Redis",
-                "image": "devicon-redis-plain"
-            },
-            {
-                "title": "ElasticSearch",
-                "image": "devicon-elasticsearch-plain"
-            },
-            {
-                "title": "CircleCI",
-                "image": "devicon-circleci-plain"
-            },            {
-                "title": "Netlify",
-                "image": "devicon-netlify-plain"
             }
         ]
     }
