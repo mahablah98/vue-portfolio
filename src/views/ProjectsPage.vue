@@ -1,10 +1,10 @@
 <template>
-  <div class="projects-container">
+  <div class="projects-container" :class="{ 'dark': isDarkMode }">
     <h2 class="text-2xl font-bold mb-6">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div v-for="(project, index) in projects" :key="index" class="project-card">
         <h3 class="text-lg font-semibold mb-2">{{ project.title }}</h3>
-        <p class="text-sm text-gray-600 mb-4">{{ project.description }}</p>
+        <p class="text-sm mb-4">{{ project.description }}</p>
         <div class="flex flex-wrap gap-2">
           <span v-for="(tech, techIndex) in project.technologies" :key="techIndex" class="tech-tag">
             {{ tech }}
@@ -18,6 +18,7 @@
 <script>
 export default {
   name: 'ProjectsPage',
+  props: ['isDarkMode'],
   data() {
     return {
       projects: [
@@ -53,7 +54,7 @@ export default {
           technologies: ['SharePoint Online', 'Vue.js', 'HTML', 'CSS', 'JavaScript']
         },
         {
-          title: 'Creating and customizing numerous Jira projects',
+          title: 'Creation and ustomization of numerous Jira projects',
           description: 'Customized issue types, workflows, schemes, permissions etc. for numerous Jira projects',
           technologies: ['Atlassian', 'Jira Cloud', 'User management', 'Workflow', 'Add-Ons']
         },
@@ -61,7 +62,7 @@ export default {
           title: 'Mass-Update of list data using PowerShell',
           description: 'Wrote several PowerShell scripts to update site settings, list data, permission etc. on SharePoint Online',
           technologies: ['PowerShell', 'PnP', 'Scripting', 'SharePoint', 'Permissions']
-        }
+        },
       ]
     }
   }
@@ -77,5 +78,17 @@ export default {
 }
 .tech-tag {
   @apply bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full;
+}
+
+ .dark {
+   @apply text-gray-100;
+ }
+
+.dark .project-card {
+  @apply bg-gray-800;
+}
+
+.dark .tech-tag {
+  @apply bg-blue-900 text-blue-200;
 }
 </style>

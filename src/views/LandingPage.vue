@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-container">
+  <div class="landing-container" :class="{ 'dark-mode': isDarkMode }">
     <header class="header">
       <img src="@/assets/profilePic.png" alt="Mahatir Said" class="profile-pic" />
       <div class="header-text">
@@ -49,6 +49,7 @@ import EventData from '../components/TimelineEvents.json';
 export default {
   name: 'LandingPage',
   components: { TimelineEvents, EducationTimeline },
+  props: ['isDarkMode'],
   computed: {
     uniqueTags() {
       const allTags = this.timelineEvents.flatMap(event => event.Tags);
@@ -65,7 +66,6 @@ export default {
 
 
 <style scoped>
-
 .landing-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -86,22 +86,22 @@ export default {
   height: 150px;
   border-radius: 50%;
   margin-right: 2rem;
-  border: 4px solid #fff;
+  border: 4px solid #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .header-text h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: #333333;
   margin-bottom: 0.5rem;
 }
 .header-text h3 {
   font-size: 1.8rem;
-  color: #34495e;
+  color: #666666;
 }
 .content section {
   margin-bottom: 3rem;
-  background: #fff;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -109,42 +109,44 @@ export default {
 .content h2 {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: #333333;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #e0e0e0;
   padding-bottom: 0.5rem;
 }
 .intro-text {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #34495e;
+  color: inherit;
 }
+
 .intro-text a {
-  color: #3498db;
+  color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
 }
+
 .intro-text a:hover {
-  color: #2980b9;
+  color: #0056b3;
 }
+
 .abilities-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 .ability {
-  background-color: #3498db;
+  background-color: #f0f0f0;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   font-size: 1rem;
-  color: #fff;
+  color: #333333;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .ability:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 
 .abilities-container {
   display: flex;
@@ -158,7 +160,7 @@ export default {
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   font-size: 0.9rem;
-  color: #333;
+  color: #333333;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -178,5 +180,51 @@ export default {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
+}
+
+.dark-mode .intro-text,
+.dark-mode .content section {
+  color: #ffffff;
+}
+
+
+.dark-mode .intro-text,
+.dark-mode .content section {
+  color: #e2e8f0;
+}
+
+.dark-mode .intro-text a {
+  color: #4fd1c5;
+}
+
+.dark-mode .intro-text a:hover {
+  color: #81e6d9;
+}
+
+.dark-mode .header {
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+.dark-mode .header-text h1,
+.dark-mode .header-text h3 {
+  color: #f7fafc;
+}
+
+.dark-mode .content section {
+  background: #2d3748;
+}
+
+.dark-mode .content h2 {
+  color: #f7fafc;
+  border-bottom-color: #4a5568;
+}
+
+.dark-mode .ability {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.dark-mode .ability:hover {
+  background-color: #718096;
 }
 </style>

@@ -8,7 +8,7 @@
         </li>
       </ul>
       <div class="navbar-icons">
-        <NavBarIcons v-for="icon in icons" :key="icon" :selectedIcon="icon" />
+        <NavBarIcons v-for="icon in icons" :key="icon" :selectedIcon="icon" :isDarkMode="isDarkMode" />
         <button @click="toggleDarkMode" class="dark-mode-toggle">
           {{ isDarkMode ? '☀️' : '🌙' }}
         </button>
@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #ffffff;
+  background-color: #f7fafc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -64,12 +64,12 @@ export default {
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: #2d3748;
   text-decoration: none;
   transition: color 0.3s;
 }
 .navbar-brand:hover {
-  color: #3498db;
+  color: #4a5568;
 }
 .navbar-menu {
   display: flex;
@@ -81,13 +81,13 @@ export default {
   margin-left: 1.5rem;
 }
 .navbar-link {
-  color: #34495e;
+  color: #2d3748;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s;
 }
 .navbar-link:hover {
-  color: #3498db;
+  color: #4a5568;
 }
 .navbar-icons {
   display: flex;
@@ -115,22 +115,25 @@ export default {
   padding: 0.5rem;
   border-radius: 50%;
   transition: background-color 0.3s;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
 }
 .dark-mode-toggle:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .dark-mode .navbar {
-  background-color: #333;
-  color: #fff;
+  background-color: #2d3748;
+  color: #f7fafc;
 }
+
 .dark-mode .navbar-brand,
 .dark-mode .navbar-link {
-  color: #fff;
+  color: #f7fafc;
 }
+
 .dark-mode .navbar-link:hover {
-  color: #ddd;
+  color: #e2e8f0;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 </style>

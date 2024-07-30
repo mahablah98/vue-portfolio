@@ -60,20 +60,9 @@ export default {
 </script>
 
 <style scoped>
-
-.timeline-description {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.timeline-description li {
-  margin-bottom: 5px;
-}
-
 .timeline-container {
   position: relative;
   padding: 20px 0;
-  background-color: #f9f9f9;
 }
 
 .timeline {
@@ -81,7 +70,7 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 0;
-  border-left: 2px solid #007bff; /* Timeline line color */
+  border-left: 2px solid #ccc;
 }
 
 .timeline-event {
@@ -96,13 +85,13 @@ export default {
   top: 0;
   width: 24px;
   height: 24px;
-  background-color: #007bff; /* Timeline dot color */
+  background-color: #4a90e2;
   border-radius: 50%;
   box-shadow: 0 0 0 4px #fff;
 }
 
 .timeline-content {
-  background-color: #fff;
+  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -116,13 +105,23 @@ export default {
 .timeline-date {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #333;
+  color: #4a90e2;
 }
 
 .timeline-title {
   margin: 5px 0;
   font-size: 1.2rem;
-  color: #007bff;
+  color: #333;
+}
+
+.timeline-description {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #666;
+}
+
+.timeline-description li {
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
@@ -149,5 +148,31 @@ export default {
   .timeline-title {
     font-size: 1.1rem;
   }
+}
+
+:deep(.dark-mode) .timeline {
+  border-left-color: #4a5568;
+}
+
+:deep(.dark-mode) .timeline-content {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+:deep(.dark-mode) .timeline-date {
+  color: #81e6d9;
+}
+
+:deep(.dark-mode) .timeline-title {
+  color: #f7fafc;
+}
+
+:deep(.dark-mode) .timeline-description {
+  color: #cbd5e0;
+}
+
+:deep(.dark-mode) .timeline-dot {
+  background-color: #4fd1c5;
+  box-shadow: 0 0 0 4px #2d3748;
 }
 </style>

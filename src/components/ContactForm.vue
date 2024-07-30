@@ -50,19 +50,16 @@ export default {
   flex-direction: column;
   gap: 1rem;
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .form-group label {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
-
 .form-input {
   width: 100%;
   padding: 0.75rem;
@@ -71,33 +68,28 @@ export default {
   border-radius: 4px;
   transition: border-color 0.3s;
 }
-
 .form-input:focus {
   border-color: #007bff;
   outline: none;
 }
-
 .recaptcha {
   margin-top: 1rem;
 }
-
 .submit-button {
   align-self: center;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #007bff;
+  background-color: #0a1529;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
-
 .submit-button:hover {
   background-color: #0056b3;
 }
-
 .submit-button:focus {
   background-color: #0056b3;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);

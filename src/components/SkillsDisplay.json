@@ -3,12 +3,36 @@
         "type": "General",
         "technologies": [
             {
+                "title": "Azure",
+                "image": "devicon-azure-plain"
+            },
+            {
+                "title": "Azure DevOps",
+                "image": "devicon-azuredevops-plain"
+            },
+            {
+                "title": "Jira",
+                "image": "devicon-jira-plain"
+            },
+            {
+                "title": "Confluence",
+                "image": "devicon-confluence-plain"
+            },
+            {
+                "title": "Bitbucket",
+                "image": "devicon-bitbucket-plain"
+            },
+            {
                 "title": "VSCode",
                 "image": "devicon-vscode-plain"
             },
             {
                 "title": "IntelliJ",
                 "image": "devicon-intellij-plain"
+            },
+            {
+                "title": "Eclipse",
+                "image": "devicon-eclipse-plain"
             },
             {
                 "title": "Docker",
@@ -21,6 +45,10 @@
             {
                 "title": "Git",
                 "image": "devicon-git-plain"
+            },
+            {
+                "title": "Github",
+                "image": "devicon-github-plain"
             }
         ]
     },
@@ -52,8 +80,12 @@
                 "image": "devicon-vuejs-plain"
             },
             {
-                "title": "Angular",
-                "image": "devicon-angularjs-plain"
+                "title": "Vuetify",
+                "image": "devicon-vuetify-line"
+            },
+            {
+                "title": "Vite",
+                "image": "devicon-vite-original"
             },
             {
                 "title": "Typescript",
@@ -62,6 +94,14 @@
             {
                 "title": "Tailwind CSS",
                 "image": "devicon-tailwindcss-original"
+            },
+            {
+                "title": "Postman",
+                "image": "devicon-postman-plain"
+            },
+            {
+                "title": "Yarn",
+                "image": "devicon-yarn-original"
             }
         ]
     },
@@ -85,24 +125,20 @@
                 "image": "devicon-java-plain"
             },
             {
-                "title": "C#",
-                "image": "devicon-csharp-plain"
-            },
-            {
-                "title": "Ruby",
-                "image": "devicon-ruby-plain"
-            },
-            {
                 "title": "PHP",
                 "image": "devicon-php-plain"
             },
             {
-                "title": "MongoDB",
-                "image": "devicon-mongodb-plain"
+                "title": "MySQL",
+                "image": "devicon-mysql-plain"
             },
             {
-                "title": "PostgreSQL",
-                "image": "devicon-postgresql-plain"
+                "title": "PowerShell",
+                "image": "devicon-powershell-plain"
+            },
+            {
+                "title": "Supabase",
+                "image": "devicon-supabase-plain"
             }
         ]
     }

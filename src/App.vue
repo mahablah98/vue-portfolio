@@ -2,7 +2,7 @@
   <div id="app" :class="{ 'dark-mode': isDarkMode }">
     <NavBar @toggle-dark-mode="toggleDarkMode" :isDarkMode="isDarkMode" />
     <div class="main-container">
-      <router-view />
+      <router-view :isDarkMode="isDarkMode" />
     </div>
   </div>
 </template>
@@ -33,7 +33,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background-color: #f5f5f5;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -49,12 +48,12 @@ export default {
   transition: background-color 0.3s;
 }
 
-#app.dark-mode {
-  background-color: #1a1a1a;
-  color: #ffffff;
+.dark-mode {
+  background-color: #1a202c;
+  color: #e2e8f0;
 }
 
-#app.dark-mode .main-container {
-  background-color: #2c2c2c;
+.dark-mode .main-container {
+  background-color: #2d3748;
 }
 </style>
