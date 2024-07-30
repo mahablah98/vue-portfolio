@@ -38,6 +38,11 @@
         </div>
       </section>
     </main>
+    <div class="cv-download-container">
+      <a href="https://drive.google.com/file/d/1Q03J2FRA766yvWa-sJQ71BwFv4CQy_oe/view?usp=sharing" target="_blank" class="cv-download-button">
+        Download my CV
+      </a>
+    </div>
   </div>
 </template>
 
@@ -63,7 +68,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 .landing-container {
@@ -171,6 +175,28 @@ export default {
   background-color: #e0e0e0;
 }
 
+.cv-download-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cv-download-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cv-download-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .abilities-container {
     justify-content: center;
@@ -226,5 +252,14 @@ export default {
 
 .dark-mode .ability:hover {
   background-color: #718096;
+}
+
+.dark-mode .cv-download-button {
+  background-color: #4fd1c5;
+  color: #1a202c;
+}
+
+.dark-mode .cv-download-button:hover {
+  background-color: #81e6d9;
 }
 </style>

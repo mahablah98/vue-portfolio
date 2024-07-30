@@ -65,7 +65,7 @@ export default {
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
-  border: 1px solid white;
+  border: 1px solid grey;
   border-radius: 4px;
   transition: border-color 0.3s;
   background-color: var(--input-bg);
