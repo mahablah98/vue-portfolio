@@ -50,7 +50,6 @@
 import TimelineEvents from '../components/TimelineEvents.vue';
 import EducationTimeline from '../components/EducationTimeline.vue';
 import EventData from '../components/TimelineEvents.json';
-
 export default {
   name: 'LandingPage',
   components: { TimelineEvents, EducationTimeline },
@@ -80,7 +79,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,12 +95,12 @@ export default {
 .header-text h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #333333;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 .header-text h3 {
   font-size: 1.8rem;
-  color: #666666;
+  color: #ffffff;
 }
 .content section {
   margin-bottom: 3rem;
@@ -115,7 +114,7 @@ export default {
   font-weight: bold;
   color: #333333;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #667eea;
   padding-bottom: 0.5rem;
 }
 .intro-text {
@@ -123,67 +122,42 @@ export default {
   line-height: 1.8;
   color: inherit;
 }
-
 .intro-text a {
-  color: #007bff;
+  color: #667eea;
   text-decoration: none;
   transition: color 0.3s;
 }
-
 .intro-text a:hover {
-  color: #0056b3;
+  color: #764ba2;
 }
-
-.abilities-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.ability {
-  background-color: #f0f0f0;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-size: 1rem;
-  color: #333333;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.ability:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 .abilities-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: flex-start;
 }
-
 .ability {
-  background-color: #f0f0f0;
+  background-color: #667eea;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   font-size: 0.9rem;
-  color: #333333;
+  color: #ffffff;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
-
 .ability:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #e0e0e0;
+  background-color: #764ba2;
 }
-
 .cv-download-container {
   text-align: center;
   margin-top: 2rem;
 }
-
 .cv-download-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #007bff;
+  background-color: #667eea;
   color: #ffffff;
   text-decoration: none;
   border-radius: 2rem;
@@ -191,75 +165,79 @@ export default {
   font-weight: bold;
   transition: background-color 0.3s, transform 0.3s;
 }
-
 .cv-download-button:hover {
-  background-color: #0056b3;
+  background-color: #764ba2;
   transform: translateY(-2px);
 }
-
-@media (max-width: 768px) {
-  .abilities-container {
-    justify-content: center;
-  }
-
-  .ability {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
 .dark-mode .intro-text,
 .dark-mode .content section {
   color: #ffffff;
 }
-
-
-.dark-mode .intro-text,
-.dark-mode .content section {
-  color: #e2e8f0;
-}
-
 .dark-mode .intro-text a {
-  color: #4fd1c5;
+  color: #a5b4fc;
 }
-
 .dark-mode .intro-text a:hover {
-  color: #81e6d9;
+  color: #c7d2fe;
 }
-
 .dark-mode .header {
-  background: linear-gradient(135deg, #2d3748, #1a202c);
+  background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
 }
-
 .dark-mode .header-text h1,
 .dark-mode .header-text h3 {
-  color: #f7fafc;
+  color: #ffffff;
 }
-
 .dark-mode .content section {
-  background: #2d3748;
+  background: #2c2c2c;
 }
-
 .dark-mode .content h2 {
-  color: #f7fafc;
-  border-bottom-color: #4a5568;
+  color: #ffffff;
+  border-bottom-color: #a5b4fc;
 }
-
 .dark-mode .ability {
-  background-color: #4a5568;
-  color: #e2e8f0;
+  background-color: #4b5563;
+  color: #ffffff;
 }
-
 .dark-mode .ability:hover {
-  background-color: #718096;
+  background-color: #1f2937;
 }
-
 .dark-mode .cv-download-button {
-  background-color: #4fd1c5;
-  color: #1a202c;
+  background-color: #4b5563;
+  color: #ffffff;
 }
-
 .dark-mode .cv-download-button:hover {
-  background-color: #81e6d9;
+  background-color: #1f2937;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+  .header-text h3 {
+    font-size: 1.5rem;
+  }
+  .content h2 {
+    font-size: 1.8rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+  }
+  .abilities-container {
+    justify-content: center;
+  }
+  .ability {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .cv-download-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
 }
 </style>

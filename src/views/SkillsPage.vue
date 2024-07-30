@@ -58,7 +58,7 @@ export default {
 }
 .dark-mode {
   color: #ffffff;
-  background-color: #1a202c;
+  background-color: #1a1a1a;
 }
 .dark-mode .section-title {
   color: #ffffff;

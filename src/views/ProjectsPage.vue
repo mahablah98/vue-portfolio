@@ -85,8 +85,9 @@ export default {
  }
 
 .dark .project-card {
-  @apply bg-gray-800;
+  background-color: #1a1a1a;
 }
+
 
 .dark .tech-tag {
   @apply bg-blue-900 text-blue-200;

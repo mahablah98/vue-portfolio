@@ -9,7 +9,6 @@
 
 <script>
 import NavBar from './views/NavBar.vue'
-
 export default {
   name: 'App',
   components: {NavBar},
@@ -49,11 +48,17 @@ export default {
 }
 
 .dark-mode {
-  background-color: #1a202c;
-  color: #e2e8f0;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
 .dark-mode .main-container {
-  background-color: #2d3748;
+  background-color: #2c2c2c;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
 }
 </style>

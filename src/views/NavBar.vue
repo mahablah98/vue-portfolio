@@ -128,7 +128,7 @@ export default {
   height: 24px;
 }
 .dark-mode .navbar {
-  background-color: #1a202c;
+  background-color: #1a1a1a;
   color: #fff;
 }
 .dark-mode .navbar-brand,
