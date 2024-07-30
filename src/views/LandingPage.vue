@@ -16,7 +16,7 @@
           ☝ I enhance SharePoint environments with custom applications and automation.<br />
           📍 Based in Ulm, Germany.<br />
           👨🏻‍💻 Senior Consultant at <a href="https://camdere.de/" target="_blank">Camdere Consulting GmbH</a>.<br />
-          💻 Focused on web development and administration.<br />
+          💻 Enthusiastic hobby web developer.<br />
           📚 Preparing for <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification" target="_blank">AZ-104</a> and <a href="https://university.atlassian.com/student/page/832603-acp-120-jira-administration-for-cloud-exam" target="_blank">ACP-120</a> certifications.<br />
           🎯 Aiming to build useful and interesting web applications.
         </p>

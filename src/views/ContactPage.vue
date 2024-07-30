@@ -1,7 +1,7 @@
 <template>
   <div class="contact-container">
     <p class="contact-intro">
-      Submission form for business inquiries or questions :)
+      Please use the submission form for business inquiries.
     </p>
     <br>
     <ContactForm />

@@ -28,7 +28,7 @@ export default {
     return {
       webRoutes: [
         { title: 'Skills', route: '/skills' },
-        { title: 'Experience', route: '/experiences' },
+        { title: 'Projects', route: '/projects' },
         { title: 'Contact', route: '/contact' }
       ],
       icons: ['linkedIn', 'gitSource', 'twitter', 'stackOverflow']
@@ -44,7 +44,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 .navbar {

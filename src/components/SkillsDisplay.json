@@ -3,23 +3,24 @@
         "type": "General",
         "technologies": [
             {
+                "title": "VSCode",
+                "image": "devicon-vscode-plain"
+            },
+            {
+                "title": "IntelliJ",
+                "image": "devicon-intellij-plain"
+            },
+            {
                 "title": "Docker",
                 "image": "devicon-docker-plain"
             },
             {
-                "title": "Redis",
-                "image": "devicon-redis-plain"
-            },
-            {
-                "title": "ElasticSearch",
-                "image": "devicon-elasticsearch-plain"
-            },
-            {
-                "title": "CircleCI",
-                "image": "devicon-circleci-plain"
-            },            {
                 "title": "Netlify",
                 "image": "devicon-netlify-plain"
+            },
+            {
+                "title": "Git",
+                "image": "devicon-git-plain"
             }
         ]
     },
@@ -27,20 +28,36 @@
         "type": "Frontend",
         "technologies": [
             {
+                "title": "HTML",
+                "image": "devicon-html5-plain"
+            },
+            {
+                "title": "CSS",
+                "image": "devicon-css3-plain"
+            },
+            {
+                "title": "JavaScript",
+                "image": "devicon-javascript-plain"
+            },
+            {
+                "title": "jQuery",
+                "image": "devicon-jquery-plain"
+            },
+            {
+                "title": "JSON",
+                "image": "devicon-json-plain"
+            },
+            {
                 "title": "VueJS",
                 "image": "devicon-vuejs-plain"
             },
             {
-                "title": "Javascript",
-                "image": "devicon-javascript-plain"
+                "title": "Angular",
+                "image": "devicon-angularjs-plain"
             },
             {
                 "title": "Typescript",
                 "image": "devicon-typescript-plain"
-            },
-            {
-                "title": "React",
-                "image": "devicon-react-original"
             },
             {
                 "title": "Tailwind CSS",
@@ -52,6 +69,10 @@
         "type": "Backend",
         "technologies": [
             {
+                "title": "Haskell",
+                "image": "devicon-haskell-plain"
+            },
+            {
                 "title": "Python",
                 "image": "devicon-python-plain"
             },
@@ -62,6 +83,26 @@
             {
                 "title": "Java",
                 "image": "devicon-java-plain"
+            },
+            {
+                "title": "C#",
+                "image": "devicon-csharp-plain"
+            },
+            {
+                "title": "Ruby",
+                "image": "devicon-ruby-plain"
+            },
+            {
+                "title": "PHP",
+                "image": "devicon-php-plain"
+            },
+            {
+                "title": "MongoDB",
+                "image": "devicon-mongodb-plain"
+            },
+            {
+                "title": "PostgreSQL",
+                "image": "devicon-postgresql-plain"
             }
         ]
     }

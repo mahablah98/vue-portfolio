@@ -5,9 +5,9 @@
             <p class="xl:text-lg text-base lg:indent-8 md:indent-4 sm:indent-0">
                 As a consultant, I have worked with several costumers by now, including Husqvarna, Daimler, Hensoldt AG,
                 Schwenk, Union Tank Eckstein GmbH etc. My work covered several areas: I started with administration and
-                basic 1st Level Support. Then, it continue to evolve into development, 2nd/3rd Level Support,
+                basic 1st Level Support. Then, it shifted into (app/web) development, 2nd/3rd Level Support,
                 automating processes using Power Automate, and  now I focus on project management in M365.
-                However, I do love coding and I will build some neat applications soon.
+                However, I do love coding (even though I'm not a professional developer), and I will try to build some neat applications soon.
             </p>
     </section> 
     <section>
