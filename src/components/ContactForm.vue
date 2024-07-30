@@ -1,49 +1,57 @@
 <template>
-  <form
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
-      class="contact-form"
-  >
-    <input type="hidden" name="form-name" value="contact" />
-    <p class="hidden">
-      <label>
-        Hello! <input name="bot-field" />
-      </label>
-    </p>
+  <form @submit.prevent="submitForm" class="contact-form">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" name="name" id="name" class="form-input" />
+      <input v-model="formData.name" type="text" id="name" required class="form-input" />
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" name="email" id="email" class="form-input" />
+      <input v-model="formData.email" type="email" id="email" required class="form-input" />
     </div>
     <div class="form-group">
       <label for="subject">Subject:</label>
-      <input type="text" name="subject" id="subject" class="form-input" />
+      <input v-model="formData.subject" type="text" id="subject" required class="form-input" />
     </div>
     <div class="form-group">
       <label for="message">Message:</label>
-      <textarea name="message" id="message" class="form-input"></textarea>
+      <textarea v-model="formData.message" id="message" required class="form-input"></textarea>
     </div>
-    <div data-netlify-recaptcha="true" class="recaptcha"></div>
     <div class="form-group">
-      <button type="submit" class="submit-button">
-        Send
-      </button>
+      <button type="submit" class="submit-button">Send</button>
     </div>
   </form>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'ContactForm',
-  props: ['isDarkMode'],
+  data() {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      }
+    };
+  },
+  methods: {
+    async submitForm() {
+      try {
+        await axios.post('/.netlify/functions/send-email', this.formData);
+        alert('Message sent successfully!');
+        this.formData = { name: '', email: '', subject: '', message: '' };
+      } catch (error) {
+        console.error('Error sending message:', error);
+        alert('Failed to send message. Please try again.');
+      }
+    }
+  }
 };
 </script>
+
 
 <style scoped>
 .contact-form {
