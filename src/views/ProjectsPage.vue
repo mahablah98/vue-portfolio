@@ -54,7 +54,7 @@ export default {
           technologies: ['SharePoint Online', 'Vue.js', 'HTML', 'CSS', 'JavaScript']
         },
         {
-          title: 'Creation and ustomization of numerous Jira projects',
+          title: 'Creation and customization of numerous Jira projects',
           description: 'Customized issue types, workflows, schemes, permissions etc. for numerous Jira projects',
           technologies: ['Atlassian', 'Jira Cloud', 'User management', 'Workflow', 'Add-Ons']
         },
