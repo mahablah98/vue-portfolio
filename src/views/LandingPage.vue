@@ -11,7 +11,7 @@
       <section class="intro-section">
         <h2>Hi there!</h2>
         <p class="intro-text">
-          👋🏼 I'm Maha, a dedicated M365 Consultant/Developer with 5+ years in <a href="https://www.microsoft.com/de-de/microsoft-365/sharepoint/collaboration" target="_blank">SharePoint</a> and M365.<br />
+          👋🏼 I'm Maha, a dedicated M365 Consultant/Developer with 4+ years in <a href="https://www.microsoft.com/de-de/microsoft-365/sharepoint/collaboration" target="_blank">SharePoint</a> and M365.<br />
           🎓 Computer Science (B.Sc.) graduate from <a href="https://www.uni-ulm.de/en/" target="_blank">Ulm University</a> and <a href="https://www.gu.se/en" target="_blank">Gothenburg University</a>.<br />
           ☝ I enhance SharePoint environments with custom applications and automation.<br />
           📍 Based in Ulm, Germany.<br />

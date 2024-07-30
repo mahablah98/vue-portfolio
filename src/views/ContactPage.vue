@@ -34,7 +34,7 @@ export default {
   margin-bottom: 2rem;
 }
 .dark-mode {
-  background-color: #7184a6;
+  background-color: #1a202c;
   color: #fff;
 }
 .dark-mode .contact-intro {

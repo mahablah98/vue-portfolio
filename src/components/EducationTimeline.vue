@@ -3,7 +3,7 @@
     <div class="timeline">
       <div
           class="timeline-event"
-          v-for="(event, index) in educationData"
+          v-for="(event, index) in eventdata"
           :key="index"
       >
         <div class="timeline-dot"></div>
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import EducationData from './EducationTimeline.json';
+import EventData from './EducationTimeline.json';
 
 export default {
   name: 'EducationTimeline',
   data() {
     return {
-      educationData: EducationData,
+      eventdata: EventData,
     };
   },
 };
@@ -35,7 +35,6 @@ export default {
 .timeline-container {
   position: relative;
   padding: 20px 0;
-  background-color: #f9f9f9;
 }
 
 .timeline {
@@ -43,7 +42,7 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 0;
-  border-left: 2px solid #007bff; /* Timeline line color */
+  border-left: 2px solid #4a5568;
 }
 
 .timeline-event {
@@ -58,7 +57,7 @@ export default {
   top: 0;
   width: 24px;
   height: 24px;
-  background-color: #007bff; /* Timeline dot color */
+  background-color: #4a5568;
   border-radius: 50%;
   box-shadow: 0 0 0 4px #fff;
 }
@@ -78,58 +77,38 @@ export default {
 .timeline-date {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #333;
+  color: #4a5568;
 }
 
 .timeline-title {
   margin: 5px 0;
   font-size: 1.2rem;
-  color: #007bff;
+  color: #2d3748;
 }
 
-.timeline-institution {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #555;
-}
-
+.timeline-institution,
 .timeline-description {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #777;
+  color: #4a5568;
 }
 
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 20px;
-  }
+:deep(.dark-mode) .timeline {
+  border-left-color: #718096;
+}
 
-  .timeline-event {
-    padding-left: 20px;
-  }
+:deep(.dark-mode) .timeline-content {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
 
-  .timeline-dot {
-    left: -10px;
-  }
+:deep(.dark-mode) .timeline-date,
+:deep(.dark-mode) .timeline-title,
+:deep(.dark-mode) .timeline-institution,
+:deep(.dark-mode) .timeline-description {
+  color: #e2e8f0;
+}
 
-  .timeline-content {
-    padding: 15px;
-  }
-
-  .timeline-date {
-    font-size: 1rem;
-  }
-
-  .timeline-title {
-    font-size: 1.1rem;
-  }
-
-  .timeline-institution {
-    font-size: 1rem;
-  }
-
-  .timeline-description {
-    font-size: 0.9rem;
-  }
+:deep(.dark-mode) .timeline-dot {
+  background-color: #718096;
+  box-shadow: 0 0 0 4px #2d3748;
 }
 </style>

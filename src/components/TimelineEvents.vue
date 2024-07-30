@@ -124,32 +124,6 @@ export default {
   margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 20px;
-  }
-
-  .timeline-event {
-    padding-left: 20px;
-  }
-
-  .timeline-dot {
-    left: -10px;
-  }
-
-  .timeline-content {
-    padding: 15px;
-  }
-
-  .timeline-date {
-    font-size: 1rem;
-  }
-
-  .timeline-title {
-    font-size: 1.1rem;
-  }
-}
-
 :deep(.dark-mode) .timeline {
   border-left-color: #4a5568;
 }
@@ -159,20 +133,14 @@ export default {
   color: #e2e8f0;
 }
 
-:deep(.dark-mode) .timeline-date {
-  color: #81e6d9;
-}
-
-:deep(.dark-mode) .timeline-title {
-  color: #f7fafc;
-}
-
+:deep(.dark-mode) .timeline-date,
+:deep(.dark-mode) .timeline-title,
 :deep(.dark-mode) .timeline-description {
-  color: #cbd5e0;
+  color: #e2e8f0;
 }
 
 :deep(.dark-mode) .timeline-dot {
-  background-color: #4fd1c5;
+  background-color: #4a5568;
   box-shadow: 0 0 0 4px #2d3748;
 }
 </style>

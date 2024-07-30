@@ -9,11 +9,24 @@
       </ul>
       <div class="navbar-icons">
         <NavBarIcons v-for="icon in icons" :key="icon" :selectedIcon="icon" :isDarkMode="isDarkMode" />
-        <button @click="toggleDarkMode" class="dark-mode-toggle">
-          {{ isDarkMode ? '☀️' : '🌙' }}
-        </button>
       </div>
     </div>
+    <button @click="toggleDarkMode" class="dark-mode-toggle" :title="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+      <svg v-if="isDarkMode" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
   </nav>
 </template>
 
@@ -47,7 +60,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #f7fafc;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -64,12 +77,12 @@ export default {
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #2d3748;
+  color: #333;
   text-decoration: none;
   transition: color 0.3s;
 }
 .navbar-brand:hover {
-  color: #4a5568;
+  color: #007bff;
 }
 .navbar-menu {
   display: flex;
@@ -81,17 +94,55 @@ export default {
   margin-left: 1.5rem;
 }
 .navbar-link {
-  color: #2d3748;
+  color: #333;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s;
 }
 .navbar-link:hover {
-  color: #4a5568;
+  color: #007bff;
 }
 .navbar-icons {
   display: flex;
   gap: 1rem;
+}
+.dark-mode-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dark-mode-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+.dark-mode .navbar {
+  background-color: #1a202c;
+  color: #fff;
+}
+.dark-mode .navbar-brand,
+.dark-mode .navbar-link {
+  color: #fff;
+}
+.dark-mode .navbar-link:hover {
+  color: #007bff;
+}
+.dark-mode .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dark-mode .dark-mode-toggle svg {
+  stroke: #fff;
 }
 @media (max-width: 768px) {
   .navbar-container {
@@ -105,35 +156,9 @@ export default {
     margin-left: 0;
     margin-right: 1rem;
   }
-}
-
-.dark-mode-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-.dark-mode-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.dark-mode .navbar {
-  background-color: #2d3748;
-  color: #f7fafc;
-}
-
-.dark-mode .navbar-brand,
-.dark-mode .navbar-link {
-  color: #f7fafc;
-}
-
-.dark-mode .navbar-link:hover {
-  color: #e2e8f0;
-}
-
-.dark-mode .dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  .dark-mode-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
 }
 </style>

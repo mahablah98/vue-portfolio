@@ -59,7 +59,7 @@ export default {
           technologies: ['Atlassian', 'Jira Cloud', 'User management', 'Workflow', 'Add-Ons']
         },
         {
-          title: 'Mass-Update of list data using PowerShell',
+          title: 'Mass-update of list data using PowerShell',
           description: 'Wrote several PowerShell scripts to update site settings, list data, permission etc. on SharePoint Online',
           technologies: ['PowerShell', 'PnP', 'Scripting', 'SharePoint', 'Permissions']
         },

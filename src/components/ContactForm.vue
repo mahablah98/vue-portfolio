@@ -41,6 +41,7 @@
 <script>
 export default {
   name: 'ContactForm',
+  props: ['isDarkMode'],
 };
 </script>
 
@@ -58,15 +59,17 @@ export default {
 .form-group label {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--label-color);
 }
 .form-input {
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid white;
   border-radius: 4px;
   transition: border-color 0.3s;
+  background-color: var(--input-bg);
+  color: var(--input-color);
 }
 .form-input:focus {
   border-color: #007bff;
@@ -80,8 +83,8 @@ export default {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
-  background-color: #0a1529;
+  color: #ffffff;
+  background-color: #007bff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -94,5 +97,19 @@ export default {
   background-color: #0056b3;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
   outline: none;
+}
+
+:root {
+  --label-color: #000000;
+  --border-color: #000000;
+  --input-bg: #ffffff;
+  --input-color: #000000;
+}
+
+.dark-mode {
+  --label-color: #ffffff;
+  --border-color: #ffffff;
+  --input-bg: #ffffff;
+  --input-color: #000000;
 }
 </style>
